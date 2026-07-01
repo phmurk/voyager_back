@@ -84,7 +84,7 @@ class BlogPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
         fields = [
-            "id", "title", "excerpt", "content", "author", "author_avatar", "date",
+            "id", "title", "excerpt", "content", "author", "date",
             "image", "category", "read_time", "likes", "created_at"
         ]
 
@@ -92,7 +92,7 @@ class BlogPostSerializer(serializers.ModelSerializer):
 class ForumReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = ForumReply
-        fields = ["id", "topic", "author", "author_avatar", "content", "date", "likes", "created_at"]
+        fields = ["id", "topic", "author", "content", "date", "likes", "created_at"]
 
 
 class ForumTopicSerializer(serializers.ModelSerializer):
@@ -101,7 +101,7 @@ class ForumTopicSerializer(serializers.ModelSerializer):
     class Meta:
         model = ForumTopic
         fields = [
-            "id", "title", "author", "author_avatar", "date", "replies_count", "views",
+            "id", "title", "author", "date", "replies_count", "views",
             "category", "is_pinned", "last_reply", "created_at", "replies"
         ]
 
@@ -111,7 +111,7 @@ class ForumTopicListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ForumTopic
         fields = [
-            "id", "title", "author", "author_avatar", "date", "replies_count",
+            "id", "title", "author", "date", "replies_count",
             "views", "category", "is_pinned", "created_at"
         ]
 
