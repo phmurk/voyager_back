@@ -6,10 +6,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-development-key')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS',
-    default='localhost,127.0.0.1,voyager-back-248y.onrender.com'
-).split(',')
+
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "voyager-back-248y.onrender.com",
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -110,7 +112,10 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://127.0.0.1:3000').split(',')
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://voyager-front.vercel.app",
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
