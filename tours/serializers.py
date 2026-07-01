@@ -35,7 +35,6 @@ class ReviewSerializer(serializers.ModelSerializer):
             "tour",  # ОБЯЗАТЕЛЬНО ДОЛЖНО БЫТЬ ТУТ
             "tour_title",
             "name",
-            "avatar",
             "rating",
             "text",
             "date",
